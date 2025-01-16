@@ -12,7 +12,7 @@ int maxSubArray(vector<int> &nums)
     for (int num : nums)
     {
         currSum = max(num, currSum + num); // Either start a new subarray or extend the current subarray
-        maxSum = max(maxSum, currSum);     // Update the max sum
+        maxSum = max(maxSum, currSum);     // Update the max sum ....
     }
 
     return maxSum;
