@@ -16,7 +16,19 @@ int findMajorityElement(vector<int>& nums) {
             freq--;
         }
     }
-    return ans;
+    // Verifying if candidate is actually the majority element
+    freq = 0;
+    for (int num : nums) {
+        if (num == ans) {
+            freq++;
+        }
+    }
+    
+    if (freq > nums.size() / 2) {
+        return ans;
+    } else {
+        return -1; // No majority element found
+    }
 }
 
 int main() {
